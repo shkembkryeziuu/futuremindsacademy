@@ -1,0 +1,19 @@
+h1 {
+    background-color: aquamarine;
+    color: black;
+}
+
+h2 {
+    background-color: chocolate;
+    color: blue;
+}
+
+h3 {
+    background-color: rgba(222, 41, 177, 0.873);
+    color: rgba(64, 255, 0, 0.8);
+}
+
+p {
+    background-color: rgb(81, 83, 193);
+    color: rgb(144, 108, 20);
+}

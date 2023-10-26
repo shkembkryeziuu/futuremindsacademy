@@ -1,0 +1,19 @@
+h1 {
+    background-color: rgb(145, 165, 211);
+    color: rgb(18, 228, 11);
+}
+
+h2 {
+    background-color: crimson;
+    color: rgb(114, 24, 193);
+}
+
+h3 {
+    background-color: rgba(202, 140, 140, 0.873);
+    color: rgba(0, 140, 255, 0.8);
+}
+
+p {
+    background-color: rgb(81, 193, 115);
+    color: rgb(39, 20, 144);
+}
