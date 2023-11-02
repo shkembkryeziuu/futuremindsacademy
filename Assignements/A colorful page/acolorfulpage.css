@@ -1,0 +1,31 @@
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.color {
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(241, 243, 244, 0.516) 0%, rgba(33, 33, 91, 0.746) 63%);
+    color: aliceblue;
+}
+
+.ul {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    background: rgba(56, 54, 54, 0.573);
+    color: aliceblue;
+}
+
+
+
+.body {
+    background-image: url(./images/forest.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
