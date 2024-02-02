@@ -35,17 +35,21 @@ body {
     gap: 2rem;
 }
 
-.paddingtop15andbottom15 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.padding15px {
+    padding: 10px;
+}
+
+.margintop15pxbottom15px {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .bgred {
-    background-color: red;
+    background-color: rgba(232, 70, 42, 0.933);
 }
 
 .bggray {
-    background-color: gray;
+    background-color: rgb(240, 240, 243);
 }
 
 
@@ -53,7 +57,7 @@ body {
 
 /* ASIDE */
 .bodyAside {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: color;
     color: white;
     padding: 10px;
@@ -64,4 +68,8 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.asideicons:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
