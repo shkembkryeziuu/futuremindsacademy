@@ -1,0 +1,67 @@
+/* Body */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+/* GLOBAL CSS */
+.dGrid {
+    display: grid;
+}
+
+.dFlex {
+    display: flex;
+}
+
+.gridTemplateColumns2-10 {
+    grid-template-columns: auto 1fr;
+}
+
+
+.gridTemplateColumnsauto1frauto {
+    grid-template-columns: auto 1fr auto;
+}
+
+.justifycontentcenteralignitemscenter {
+    justify-content: center;
+    align-items: center;
+}
+
+.gap2 {
+    gap: 2rem;
+}
+
+.paddingtop15andbottom15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.bgred {
+    background-color: red;
+}
+
+.bggray {
+    background-color: gray;
+}
+
+
+
+
+/* ASIDE */
+.bodyAside {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: color;
+    color: white;
+    padding: 10px;
+    background-image: url(./assets/images/sidebar-1.jpg);
+}
+
+.asideimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
