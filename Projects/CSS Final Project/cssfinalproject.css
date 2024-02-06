@@ -45,14 +45,20 @@ body {
 }
 
 .bgred {
-    background-color: rgba(232, 70, 42, 0.933);
+    background-color: red;
 }
 
 .bggray {
     background-color: rgb(240, 240, 243);
 }
 
+.bggreen {
+    background-color: green;
+}
 
+.bgwhite {
+    background-color: white;
+}
 
 
 /* ASIDE */
@@ -72,4 +78,82 @@ body {
 
 .asideicons:hover {
     background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* HEADER */
+.headercontainer {
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.moreicon {
+    background-color: white;
+    color: gray;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.notificationbar {
+    position: relative;
+}
+
+
+
+.notificationbarbutton {
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+
+.notificationdropdown {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+
+
+
+}
+
+.notificationbar:hover+.notificationdropdown {
+    visibility: visible;
+}
+
+.searchbar {
+    border: none;
+    border-bottom: 2px solid grey;
+    background-color: rgb(240, 240, 243);
+    transition-timing-function: ease;
+    transition-duration: 2s;
+}
+
+.searchbar:focus {
+    border-bottom: 2px solid purple;
+}
+
+.searchicon {
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+/* MAIN */
+.img {
+    width: 20px;
+}
+
+.map {
+
+
+    max-width: 25%;
+    max-height: 15%;
+    float: left;
+
+
 }
