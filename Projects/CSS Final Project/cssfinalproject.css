@@ -17,7 +17,7 @@ body {
     display: flex;
 }
 
-.gridTemplateColumns2-10 {
+.gridTemplateColumnsauto-1 {
     grid-template-columns: auto 1fr;
 }
 
@@ -26,13 +26,16 @@ body {
     grid-template-columns: auto 1fr auto;
 }
 
-.justifycontentcenteralignitemscenter {
+.justifycontentcenter {
     justify-content: center;
+}
+
+.alignitemscenter {
     align-items: center;
 }
 
 .gap2 {
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .padding15px {
@@ -40,8 +43,7 @@ body {
 }
 
 .margintop15pxbottom15px {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0px;
 }
 
 .bgred {
@@ -61,6 +63,7 @@ body {
 }
 
 
+
 /* ASIDE */
 .bodyAside {
     background-color: rgba(0, 0, 0, 0.7);
@@ -71,8 +74,8 @@ body {
 }
 
 .asideimg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
 
@@ -86,13 +89,14 @@ body {
     gap: 2rem;
 }
 
-.moreicon {
+.headericons {
     background-color: white;
     color: gray;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
 }
+
 
 .notificationbar {
     position: relative;
@@ -108,7 +112,7 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
-
+    border: 1px solid white;
 }
 
 .notificationdropdown {
@@ -134,6 +138,7 @@ body {
 
 .searchbar:focus {
     border-bottom: 2px solid purple;
+    outline: none;
 }
 
 .searchicon {
@@ -146,14 +151,4 @@ body {
 /* MAIN */
 .img {
     width: 20px;
-}
-
-.map {
-
-
-    max-width: 25%;
-    max-height: 15%;
-    float: left;
-
-
 }
