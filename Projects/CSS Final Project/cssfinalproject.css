@@ -34,16 +34,26 @@ body {
     align-items: center;
 }
 
+.justifycontentspacebetween {
+    justify-content: space-between;
+}
+
+
+
 .gap2 {
     gap: 1rem;
 }
 
-.padding15px {
+.padding10px {
     padding: 10px;
 }
 
 .margintop15pxbottom15px {
     margin: 15px 0px;
+}
+
+.margin50px {
+    margin: 50px;
 }
 
 .bgred {
@@ -60,6 +70,10 @@ body {
 
 .bgwhite {
     background-color: white;
+}
+
+.paddingtop40px {
+    padding: 40px 0px 0px 0px;
 }
 
 
@@ -87,6 +101,7 @@ body {
 .headercontainer {
     justify-content: space-between;
     gap: 2rem;
+    align-items: center;
 }
 
 .headericons {
@@ -117,15 +132,21 @@ body {
 
 .notificationdropdown {
     position: absolute;
-    visibility: hidden;
-    left: 0;
-
-
+    display: none;
+    top: 0;
+    right: 20px;
+    background-color: white;
+    width: 300px;
 
 }
 
-.notificationbar:hover+.notificationdropdown {
-    visibility: visible;
+.notificationbar:hover .notificationdropdown {
+    display: block;
+    padding: 10px;
+}
+
+.notificationdropdowntext:hover {
+    background-color: red;
 }
 
 .searchbar {
@@ -148,7 +169,136 @@ body {
     height: 35px;
 }
 
+.menuimage {
+    visibility: hidden;
+}
+
 /* MAIN */
 .img {
+    width: 10px;
+}
+
+.countryflagdiv {
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+
+.countryflagdivhr {
+    width: 180px;
+
+}
+
+.mapandcountryconatainer {
+    border-radius: 20px;
+    padding: 25px;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+}
+
+.mapcontainer {
+    grid-template-columns: auto 1fr;
+}
+
+.globalicon {
+    width: 40px;
+    padding: 20px;
+    position: absolute;
+    top: 80px;
+    left: 330px;
+}
+
+.map {
+    width: 850px;
+    height: 250px;
+}
+
+.globalicontext {
+    transform: translateY(-5px);
+    transform: translateX(100px);
+}
+
+.countrycontainer {
+    height: 200px;
+    padding: 60px 0px 0px 0px;
+    grid-template-columns: auto 1fr;
+}
+
+.cardarticle {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.couchphoto {
+    background-color: orange;
+    padding: 20px;
     width: 20px;
+    transform: translateY(-25px);
+}
+
+.publicphoto {
+    background-color: rgba(0, 255, 255, 0.708);
+    padding: 20px;
+    transform: translateY(-25px);
+    width: 20px;
+}
+
+.storephoto {
+    background-color: rgb(17, 76, 42);
+    padding: 20px;
+    width: 20px;
+    transform: translateY(-25px);
+}
+
+.equalizerphoto {
+    background-color: rgb(180, 20, 161);
+    padding: 20px;
+    width: 20px;
+    transform: translateY(-25px);
+}
+
+.hotelsection {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hotelarticle {
+    padding: 15px;
+}
+
+.cardphoto {
+    width: 370px;
+    transform: translateY(-30px);
+    transition: transform .8;
+}
+
+.cardphotocontainer:hover .cardphoto {
+    transform: translateY(-50px);
+}
+
+.edittools {
+    visibility: hidden;
+    transform: translateY(-55px);
+}
+
+.cardphotocontainer:hover .edittools {
+    visibility: visible;
+}
+
+/* FOOTER */
+.divfooter {
+    justify-content: space-between;
+}
+
+@media screen (max-width: 768px) {
+    .bodyAside {
+        display: none;
+    }
+
+    .menuimage {
+        visibility: visible;
+    }
+
+    .headericonscontainer {
+        display: none;
+    }
+
 }
