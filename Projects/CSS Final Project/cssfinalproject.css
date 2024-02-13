@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Body */
 * {
     margin: 0;
@@ -11,31 +18,42 @@ body {
 
 /* GLOBAL CSS */
 .dGrid {
+    display: -ms-grid;
     display: grid;
 }
 
 .dFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .gridTemplateColumnsauto-1 {
+    -ms-grid-columns: auto 1fr;
     grid-template-columns: auto 1fr;
 }
 
 
 .gridTemplateColumnsauto1frauto {
+    -ms-grid-columns: auto 1fr auto;
     grid-template-columns: auto 1fr auto;
 }
 
 .justifycontentcenter {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .alignitemscenter {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .justifycontentspacebetween {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -135,8 +153,12 @@ body {
 
 /* HEADER */
 .headercontainer {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -149,6 +171,7 @@ body {
 }
 
 .headericons:hover {
+    -webkit-box-shadow: 2px -2px 30px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 2px -2px 30px -6px rgba(0, 0, 0, 0.75);
 }
 
@@ -190,7 +213,11 @@ body {
     border: none;
     border-bottom: 2px solid grey;
     background-color: rgb(240, 240, 243);
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
     transition-timing-function: ease;
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
@@ -205,18 +232,24 @@ body {
 
 /* MAIN */
 .globalicontext {
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
     transform: translateY(-20px);
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
     transform: translateX(20px);
 }
 
 .mapandcountryconatainer {
     border-radius: 20px;
     padding: 25px;
+    -ms-grid-columns: auto 1fr;
     grid-template-columns: auto 1fr;
 }
 
 .countrycontainer {
     padding: 60px 0px 0px 0px;
+    -ms-grid-columns: auto 1fr;
     grid-template-columns: auto 1fr;
 }
 
@@ -230,6 +263,7 @@ body {
 }
 
 .cardarticle {
+    -ms-grid-columns: 1fr 4rem 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
@@ -237,20 +271,29 @@ body {
 .squareicons {
     padding: 20px;
     width: 20px;
+    -webkit-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
     transform: translateY(-25px);
 }
 
 .hotelsection {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .hotelarticle {
     padding: 15px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .cardphotocontainer:hover .cardphoto {
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
     transform: translateY(-50px);
 }
 
@@ -260,16 +303,26 @@ body {
 
 .cardphoto {
     width: 100%;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
     transform: translateY(-30px);
+    -webkit-transition: -webkit-transform .6s;
+    transition: -webkit-transform .6s;
+    -o-transition: transform .6s;
     transition: transform .6s;
+    transition: transform .6s, -webkit-transform .6s;
 }
 
 .edittools {
     visibility: hidden;
+    -webkit-transform: translateY(-55px);
+    -ms-transform: translateY(-55px);
     transform: translateY(-55px);
 }
 
 .hoteltitle {
+    -webkit-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
     transform: translateY(-25px);
 }
 
@@ -279,6 +332,8 @@ body {
 
 /* FOOTER */
 .divfooter {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -289,8 +344,14 @@ body {
     }
 
     .menuandiconscontainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
@@ -307,16 +368,20 @@ body {
     }
 
     .mapandcountryconatainer {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
     .countrycontainer {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         padding: 20px;
     }
 
     .countryflagdiv {
         border-bottom: 1px solid black;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
@@ -325,6 +390,7 @@ body {
     }
 
     .hotelsection {
+        -ms-grid-columns: auto;
         grid-template-columns: auto;
     }
 
@@ -333,13 +399,21 @@ body {
 /* RESPONSIVE FOR PHONE */
 @media (max-width:1000px) {
     .cardarticle {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         gap: 4rem;
     }
 
     .divfooter {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
