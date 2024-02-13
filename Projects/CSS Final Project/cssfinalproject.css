@@ -6,6 +6,7 @@
 
 body {
     height: 100vh;
+    overflow: hidden;
 }
 
 /* GLOBAL CSS */
@@ -38,8 +39,6 @@ body {
     justify-content: space-between;
 }
 
-
-
 .gap2 {
     gap: 1rem;
 }
@@ -48,9 +47,22 @@ body {
     padding: 10px;
 }
 
-.margintop15pxbottom15px {
-    margin: 15px 0px;
+.padding50px {
+    padding: 50px;
 }
+
+.margintop30pxbottom30px {
+    margin: 30px 0px;
+}
+
+.margintop20pxbottom20px {
+    margin: 20px 0px;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
 
 .margin50px {
     margin: 50px;
@@ -64,8 +76,24 @@ body {
     background-color: rgb(240, 240, 243);
 }
 
+.colorgray {
+    color: gray;
+}
+
 .bggreen {
     background-color: green;
+}
+
+.bgorange {
+    background-color: orange;
+}
+
+.bghotpink {
+    background-color: rgb(184, 52, 118);
+}
+
+.bgaqua {
+    background-color: aqua;
 }
 
 .bgwhite {
@@ -76,10 +104,9 @@ body {
     padding: 40px 0px 0px 0px;
 }
 
-
-
 /* ASIDE */
 .bodyAside {
+    overflow-y: scroll;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: color;
     color: white;
@@ -97,6 +124,11 @@ body {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+/*  CONTAINER */
+.container {
+    overflow-y: scroll;
+}
+
 /* HEADER */
 .headercontainer {
     justify-content: space-between;
@@ -112,12 +144,14 @@ body {
     height: 35px;
 }
 
+.headericons:hover {
+    box-shadow: 2px -2px 30px -6px rgba(0, 0, 0, 0.75);
+}
+
 
 .notificationbar {
     position: relative;
 }
-
-
 
 .notificationbarbutton {
     border-radius: 50%;
@@ -137,7 +171,6 @@ body {
     right: 20px;
     background-color: white;
     width: 300px;
-
 }
 
 .notificationbar:hover .notificationdropdown {
@@ -162,63 +195,36 @@ body {
     outline: none;
 }
 
-.searchicon {
-    background-color: white;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-}
-
 .menuimage {
     visibility: hidden;
 }
 
 /* MAIN */
 .img {
-    width: 10px;
+    width: 25px;
 }
 
 .countryflagdiv {
-    flex-direction: row;
     border-bottom: 1px solid black;
-}
-
-.countryflagdivhr {
-    width: 180px;
-
 }
 
 .mapandcountryconatainer {
     border-radius: 20px;
     padding: 25px;
     grid-template-columns: auto 1fr;
-    justify-content: space-between;
-}
-
-.mapcontainer {
-    grid-template-columns: auto 1fr;
-}
-
-.globalicon {
-    width: 40px;
-    padding: 20px;
-    position: absolute;
-    top: 80px;
-    left: 330px;
 }
 
 .map {
-    width: 850px;
+    width: 100%;
     height: 250px;
 }
 
 .globalicontext {
-    transform: translateY(-5px);
-    transform: translateX(100px);
+    transform: translateY(-20px);
+    transform: translateX(20px);
 }
 
 .countrycontainer {
-    height: 200px;
     padding: 60px 0px 0px 0px;
     grid-template-columns: auto 1fr;
 }
@@ -228,33 +234,12 @@ body {
     gap: 4rem;
 }
 
-.couchphoto {
-    background-color: orange;
+.squareicons {
     padding: 20px;
     width: 20px;
     transform: translateY(-25px);
 }
 
-.publicphoto {
-    background-color: rgba(0, 255, 255, 0.708);
-    padding: 20px;
-    transform: translateY(-25px);
-    width: 20px;
-}
-
-.storephoto {
-    background-color: rgb(17, 76, 42);
-    padding: 20px;
-    width: 20px;
-    transform: translateY(-25px);
-}
-
-.equalizerphoto {
-    background-color: rgb(180, 20, 161);
-    padding: 20px;
-    width: 20px;
-    transform: translateY(-25px);
-}
 
 .hotelsection {
     grid-template-columns: 1fr 1fr 1fr;
@@ -262,12 +247,22 @@ body {
 
 .hotelarticle {
     padding: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardphoto {
-    width: 370px;
+    width: 100%;
     transform: translateY(-30px);
-    transition: transform .8;
+    transition: transform .6s;
+}
+
+.hoteltext {
+    text-align: center
+}
+
+.hoteltitle {
+    transform: translateY(-25px);
 }
 
 .cardphotocontainer:hover .cardphoto {
@@ -288,8 +283,19 @@ body {
     justify-content: space-between;
 }
 
-@media screen (max-width: 768px) {
+/* RESPONSIVE FOR TABLET */
+@media (max-width: 1200px) {
     .bodyAside {
+        display: none;
+    }
+
+    .menuandiconscontainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .headericons {
         display: none;
     }
 
@@ -297,8 +303,44 @@ body {
         visibility: visible;
     }
 
+    .mapandcountryconatainer {
+        grid-template-columns: 1fr;
+    }
+
     .headericonscontainer {
         display: none;
     }
 
+    .countrycontainer {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .countryflagdiv {
+        border-bottom: 1px solid black;
+        justify-content: space-between;
+    }
+
+    .hotelarticle {
+        margin: 40px;
+    }
+
+    .hotelsection {
+        grid-template-columns: auto;
+    }
+
+}
+
+
+/* RESPONSIVE FOR IPHONE */
+@media (max-width:1000px) {
+    .cardarticle {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .divfooter {
+        grid-template-columns: auto 1fr;
+        display: grid;
+    }
 }
