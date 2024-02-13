@@ -104,6 +104,10 @@ body {
     padding: 40px 0px 0px 0px;
 }
 
+.img {
+    width: 25px;
+}
+
 /* ASIDE */
 .bodyAside {
     overflow-y: scroll;
@@ -200,12 +204,9 @@ body {
 }
 
 /* MAIN */
-.img {
-    width: 25px;
-}
-
-.countryflagdiv {
-    border-bottom: 1px solid black;
+.globalicontext {
+    transform: translateY(-20px);
+    transform: translateX(20px);
 }
 
 .mapandcountryconatainer {
@@ -214,19 +215,18 @@ body {
     grid-template-columns: auto 1fr;
 }
 
-.map {
-    width: 100%;
-    height: 250px;
-}
-
-.globalicontext {
-    transform: translateY(-20px);
-    transform: translateX(20px);
-}
-
 .countrycontainer {
     padding: 60px 0px 0px 0px;
     grid-template-columns: auto 1fr;
+}
+
+.countryflagdiv {
+    border-bottom: 1px solid black;
+}
+
+.map {
+    width: 100%;
+    height: 250px;
 }
 
 .cardarticle {
@@ -240,7 +240,6 @@ body {
     transform: translateY(-25px);
 }
 
-
 .hotelsection {
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -251,22 +250,18 @@ body {
     align-items: center;
 }
 
+.cardphotocontainer:hover .cardphoto {
+    transform: translateY(-50px);
+}
+
+.cardphotocontainer:hover .edittools {
+    visibility: visible;
+}
+
 .cardphoto {
     width: 100%;
     transform: translateY(-30px);
     transition: transform .6s;
-}
-
-.hoteltext {
-    text-align: center
-}
-
-.hoteltitle {
-    transform: translateY(-25px);
-}
-
-.cardphotocontainer:hover .cardphoto {
-    transform: translateY(-50px);
 }
 
 .edittools {
@@ -274,8 +269,12 @@ body {
     transform: translateY(-55px);
 }
 
-.cardphotocontainer:hover .edittools {
-    visibility: visible;
+.hoteltitle {
+    transform: translateY(-25px);
+}
+
+.hoteltext {
+    text-align: center
 }
 
 /* FOOTER */
@@ -295,6 +294,10 @@ body {
         justify-content: space-between;
     }
 
+    .headericonscontainer {
+        display: none;
+    }
+
     .headericons {
         display: none;
     }
@@ -305,10 +308,6 @@ body {
 
     .mapandcountryconatainer {
         grid-template-columns: 1fr;
-    }
-
-    .headericonscontainer {
-        display: none;
     }
 
     .countrycontainer {
@@ -331,8 +330,7 @@ body {
 
 }
 
-
-/* RESPONSIVE FOR IPHONE */
+/* RESPONSIVE FOR PHONE */
 @media (max-width:1000px) {
     .cardarticle {
         grid-template-columns: 1fr;
