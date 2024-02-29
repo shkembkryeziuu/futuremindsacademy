@@ -1,0 +1,77 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(./images/background.jpg);
+    cursor: url(./images/mouse.png) 0 1000, default;
+}
+
+li,
+a {
+    cursor: url(./images/mouse.png) 0 1000, default;
+}
+
+.textaligncenter {
+    text-align: center;
+}
+
+.displayinline {
+    display: inline;
+}
+
+.darkblue {
+    background-color: #222e50;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
+}
+
+li {
+    display: inline;
+}
+
+
+.bggreen {
+    background-color: lightgreen;
+    border: 3px solid transparent;
+}
+
+.bggreen:hover {
+    background-color: #556b2f;
+    border: 5px solid black;
+    border-radius: 50px;
+}
+
+.bgaqua {
+    background-color: aqua;
+    border: 3px solid transparent;
+}
+
+.bgaqua:hover {
+    border: 5px solid black;
+    border-radius: 50px;
+    background-color: #222e50;
+    color: white;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.padding15 {
+    padding: 15px;
+}
+
+.margin50 {
+    margin: 50px;
+}
+
+.bgsilver {
+    background-color: #c0c0c0;
+    width: 1000px;
+}
+
+.button {
+    background-color: #222e50;
+    color: white;
+}
