@@ -1,0 +1,22 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.flex-child {
+    text-align: center;
+}

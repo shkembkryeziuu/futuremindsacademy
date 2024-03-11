@@ -1,0 +1,15 @@
+.lorem {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.l {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 10px;
+    font-size: 100px;
+}
+
+.paragraph {
+    width: 500px;
+}

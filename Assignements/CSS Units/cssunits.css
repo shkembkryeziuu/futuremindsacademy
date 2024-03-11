@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div:nth-child(odd) {
+    background-color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 25vh;
+    color: white;
+}
+
+div:nth-child(even) {
+    background-color: wheat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 25vh;
+    color: black;
+}
+
+.white {
+    text-decoration: underline white;
+
+}
+
+.black {
+    text-decoration: underline black;
+    color: black;
+}
+
+hr {
+    border: 33% solid red;
+}
+
+p {
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 2em;
+}

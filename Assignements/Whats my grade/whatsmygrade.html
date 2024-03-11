@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whats my grade?</title>
+  </head>
+  <body>
+    <script>
+      //input
+      let points = prompt("Enter your points (0-100):");
+
+      //logic
+      if (isNaN(points) || points < 0 || points > 100) {
+        console.log("There was an error in your input.");
+      } else {
+        points = parseInt(points);
+
+        let grade;
+        if (points >= 0 && points <= 19) {
+          grade = 1;
+        } else if (points >= 20 && points <= 39) {
+          grade = 2;
+        } else if (points >= 40 && points <= 59) {
+          grade = 3;
+        } else if (points >= 60 && points <= 79) {
+          grade = 4;
+        } else {
+          grade = 5;
+        }
+        //output
+        console.log(`Your grade is: ${grade}`);
+      }
+    </script>
+  </body>
+</html>

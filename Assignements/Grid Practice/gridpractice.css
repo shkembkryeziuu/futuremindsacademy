@@ -1,0 +1,35 @@
+/* BODY */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN */
+main {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.mainsection {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+/* GLOBAL CSS */
+
+.backroundcolorlightpink {
+    background-color: lightpink;
+}
+
+.backroundcolorgreen {
+    background-color: green;
+}
+
+.backroundcolorwhite {
+    background-color: white;
+}
+
+.textwhite {
+    color: white;
+}

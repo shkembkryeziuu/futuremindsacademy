@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Internal External</title>
+  </head>
+
+  <body>
+    <a href="javascript:alert('Inline href')">You click me</a>
+    <p onclick="alert('inline onclick')">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+      aspernatur architecto, libero expedita possimus unde hic et nostrum
+      numquam, id dicta fugiat impedit accusantium aliquam aliquid explicabo
+      iure beatae dolore?
+    </p>
+
+    <script>
+      alert("This is coming from internal");
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

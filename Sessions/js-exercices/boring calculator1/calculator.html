@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numberone = parseFloat(prompt("Write a number"));
+      let operation = prompt("write a operation");
+      let secondnumber = parseFloat(prompt("write a number"));
+      let result;
+
+      if (operation === "+") {
+        result = numberone + secondnumber;
+      } else if (operation === "-") {
+        result = numberone - secondnumber;
+      } else if (operation === "*") {
+        result = numberone * secondnumber;
+      } else if (operation === "/") {
+        if (secondnumber === 0);
+        throw new error("canot divide by zero!");
+        result = numberone / secondnumber;
+      } else {
+        throw new error("Unsuported Opperation");
+      }
+      alert(`The result is:${result}`);
+    </script>
+  </body>
+</html>

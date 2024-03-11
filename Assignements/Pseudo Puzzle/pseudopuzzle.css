@@ -1,0 +1,12 @@
+p {
+    background-color: aqua;
+}
+
+p:hover {
+    background-color: blue;
+}
+
+
+p:hover::first-letter {
+    font-size: 150px;
+}

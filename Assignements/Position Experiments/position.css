@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    position: relative;
+    margin: 20px 20px;
+    height: 100px;
+    background-color: white;
+    width: 500px;
+    box-shadow: -2px 1px 39px 9px rgba(0, 0, 0, 0.61);
+
+}
+
+.cardtitle {
+    font-size: 2.5rem;
+    top: -25px;
+    position: absolute;
+    margin-top: 20px;
+    top: -50px;
+}
+
+.cardparagraph {
+    position: absolute;
+    top: 50px;
+}
+
+.earth {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: solid black;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.cardbutton {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    top: -10px;
+    right: -10px;
+    position: absolute;
+}

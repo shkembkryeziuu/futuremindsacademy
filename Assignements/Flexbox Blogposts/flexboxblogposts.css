@@ -1,0 +1,104 @@
+/* BODY */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* GLOBAL CSS */
+.dFlex {
+    display: flex;
+}
+
+.bgcolourblue {
+    background-color: #3364FF;
+}
+
+.bgcolourgreen {
+    background-color: #58FF33;
+}
+
+.bgcolourred {
+    background-color: red;
+}
+
+.textwhite {
+    color: white;
+}
+
+hr,
+h6 {
+    color: gray;
+}
+
+.name {
+    text-decoration: none;
+    color: #3364FF;
+}
+
+.height100vh {
+    height: 100vh;
+}
+
+.height100vh {
+    height: 100vh;
+}
+
+.width80vw {
+    width: 80vw;
+}
+
+.width20vw {
+    width: 20vw;
+}
+
+.fSize30 {
+    font-size: 30px;
+}
+
+.contentCenter {
+    justify-content: center;
+}
+
+.gap7px {
+    gap: 7px;
+}
+
+.buttonlogin {
+    padding: 8;
+}
+
+.justifycontentspacebetween {
+    justify-content: space-between;
+}
+
+.alignitemsend {
+    align-items: end;
+}
+
+.flexdirectioncolumn {
+    flex-direction: column;
+}
+
+.justifycontentcenter {
+    justify-content: center;
+}
+
+/* ASIDE */
+
+.asidebutton {
+    background-color: transparent;
+    border: 2px solid black;
+    color: white;
+}
+
+/* MAIN */
+
+main {
+    padding: 30px 0;
+}
+
+.blogimage {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}

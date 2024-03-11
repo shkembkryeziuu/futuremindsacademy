@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.result-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: darkslategray;
+}
+
+.answer {
+  grid-column: span 2;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.player-answer {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#Player1::before {
+  content: "Player 1";
+}
+
+#Player2::before {
+  content: "Player 2";
+}

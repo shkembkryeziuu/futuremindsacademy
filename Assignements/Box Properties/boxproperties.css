@@ -1,0 +1,13 @@
+img {
+    margin-top: 20px;
+    float: left;
+    border: 5px solid black;
+}
+
+img:hover {
+    border: 5px dotted red;
+}
+
+body {
+    background-color: orange;
+}

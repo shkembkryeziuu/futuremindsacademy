@@ -1,0 +1,65 @@
+/* BODY */
+body {
+    padding: 0%;
+    margin: 0%;
+}
+
+/* GLOBAL CSS */
+.dGrid {
+    display: grid;
+}
+
+.darkblue {
+    background-color: #222e50;
+}
+
+.textwhite {
+    color: white;
+}
+
+.bgcolourblue {
+    background-color: #3364FF;
+}
+
+.bgcolourgreen {
+    background-color: #58FF33;
+}
+
+.bgcolourred {
+    background-color: red;
+}
+
+.gridTemplaterows1 {
+    grid-template-rows: 1fr;
+}
+
+.gridTemplatecolumns1auto {
+    grid-template-columns: 1fr auto;
+}
+
+/* MAIN AND ASIDE CONTAINER */
+.grid-container {
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+/* ASIDE */
+.grid-containeraside {
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    padding: 5px;
+}
+
+/* MAIN */
+
+.name {
+    text-decoration: none;
+    color: #3364FF;
+}
+
+.blogimage {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}

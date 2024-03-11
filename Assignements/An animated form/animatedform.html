@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Animated Form</title>
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./animatedform.css">
+</head>
+
+<body>
+    <main>
+        <section class="dFlex justifycontentcenter alignitemscenter">
+            <article class="background-gray padding20">
+                <div class="positionrelative">
+                    <input type="text" placeholder="First Name" maxlength="12" required id="name">
+                    <label for="name" class="positionabsolute labelinput1 fontsize30px">*Enter a valid name</label>
+                </div>
+                <br>
+                <div class="positionrelative">
+                    <input type="text" placeholder="Last Name" maxlength="12" required id="lastname">
+                    <label for="lastname" class="positionabsolute labelinput2">*Enter a valid last
+                        name</label>
+                </div>
+                <br>
+                <div class="positionrelative">
+                    <input type="text" placeholder="Email" maxlength="20" required id="email">
+                    <label for="email" class="positionabsolute labelinput3">*Your email should be a Gmail domain</label>
+                </div>
+                <br>
+                <div class="dFlex"><button class="background-blue textwhite padding20">Submit</button>
+                    <figure><img src="./images/loading-387.png" alt="circle" class="figureimg"></figure>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
