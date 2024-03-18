@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let currentnumber = parseInt(prompt("Write a number"));
+      while (currentnumber !== 1) {
+        console.log(currentnumber);
+
+        if (currentnumber % 2 === 0) {
+          currentnumber /= 2;
+        } else {
+          currentnumber = currentnumber * 3 + 1;
+        }
+      }
+    </script>
+  </body>
+</html>
