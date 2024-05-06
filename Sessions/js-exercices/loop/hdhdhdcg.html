@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let counter = 1;
+      //   while (counter <= 100) {
+      //     console.log(counter);
+      //     counter++;
+      //   }
+
+      //   let userinput = parseInt(prompt("Type a number!"));
+
+      //   let counter = 1;
+
+      //   while (counter <= userinput) {
+      //     console.log(counter);
+      //     counter++;
+      //   }
+
+      //   let counter = 1;
+      //   while (counter <= 100) {
+      //     console.log(counter);
+      //     counter += 2;
+      //   }
+
+      //   let counter = 1;
+      //   let sum = 1;
+      //   while (counter <= 100) {
+      //     sum *= counter;
+      //     counter++;
+      //   }
+
+      //   console.log(sum);
+
+      // let userinput = parseInt(prompt("Write a number"));
+      // let sum = 0;
+      // while (userinput !== 0) {
+      //   sum += userinput;
+      //   userinput = parseInt(prompt("Write a number"));
+      // }
+      // alert(sum);
+
+      // let userinput;
+      // let sum = 0;
+      // do {
+      //   userinput = parseInt(prompt("Write a number"));
+      //   sum += userinput;
+      // } while (userinput !== 0);
+      // alert(sum);
+
+      let random = Math.floor(Math.random() * 6) + 1;
+      let userguess;
+      let userguesstries = 0;
+      let userDistance = Math.abs(random - userguess);
+
+      do {
+        userguess = parseInt(prompt("Write a number from 1-6"));
+        userguesstries++;
+      } while (userguess !== random);
+      {
+      }
+      if (userguesstries === 1) {
+        alert(
+          `The correct answer was ${random}and you guesses in ${userguesstries}try`
+        );
+      } else {
+        alert(
+          `The correct answer was ${random} and you guesses in ${userguesstries} tries`
+        );
+      }
+    </script>
+  </body>
+</html>

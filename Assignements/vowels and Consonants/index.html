@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Character Type Detector</h1>
+  <p>Press any key on the keyboard to detect its type.</p>
+  <script>
+   document.addEventListener('keypress', (e) => {
+    let letter = e.key;
+
+detectCharacterType(letter)
+});
+
+    function detectCharacterType(letter) {
+      if (/[aeiouAEIOU]/.test(letter)) {
+        console.log("'" + letter + "' is a vowel.");
+      } else if (/[a-zA-Z]/.test(letter)) {
+        console.log("'" + letter + "' is a consonant.");
+      } else if (/[0-9]/.test(letter)) {
+        console.log("'" + letter + "' is a number.");
+      } else {
+        console.log("'" + letter + "' is another symbol.");
+      }
+    }
+  </script>
+</body>
+</html>

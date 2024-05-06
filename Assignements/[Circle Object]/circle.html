@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let circle = {
+        radius: 4,
+        getArea: function (r) {
+          return 3.14 * r * r;
+        },
+        getParameter: function (r) {
+          return 2 * Math.PI * r;
+        },
+        getCenter: function (center) {
+          return center;
+        },
+
+        setCenter: function (set) {},
+      };
+
+      console.log("radius: " + circle.radius);
+      console.log("Area: " + Math.floor(circle.getArea(circle.radius)));
+      console.log("Perimter : " + circle.getParameter(circle.radius));
+      console.log("Center: " + circle.getCenter(circle.radius));
+    </script>
+
+    <!-- Create an object called circle which has a radius property which represents its radius. Create getters and setters for this radius.
+ Add two functions called getArea and getPerimeter to this object, which return the area and perimeter of the circle.
+ Add a center property to this circle which represents the center of the circle. This property is also an object with two properties x and y.
+ Add a getCenter function which returns the center object
+ Add a setCenter function to update the center of the circle
+ Create a grow function which accepts a number argument. This function increases the radius of the circle by that number.
+ Create a shrink function which decreases the radius of the circle
+ Create a printDetails function which prints to the console details about the circle like its radius and position -->
+  </body>
+</html>
