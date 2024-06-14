@@ -8,7 +8,7 @@ const ctx = rrafshi.getContext("2d");
 let br = document.createElement("br");
 document.body.appendChild(br);
 
-let startOver = documnet.createElement("button");
+let startOver = document.createElement("button");
 startOver.innerText = "Start Over";
 startOver.style.fontSize = "20px";
 startOver.style.padding = "10px";

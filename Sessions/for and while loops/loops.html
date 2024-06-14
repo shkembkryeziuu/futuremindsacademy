@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="hi"></h1>
+    <h1 class="hello"></h1>
+    <script>
+    const hi = document.querySelector(".hi")
+    const hello = document.querySelector(".hello")
+
+    let i = 40
+    while (i >=0){
+
+        i--;
+
+hi.innerHTML+=`${i+ " "}`
+}
+
+   for(let i=40; i >= 0; i--){
+    hello.innerHTML+=`${i+ " "} `
+   }
+
+    </script>
+</body>
+</html>
