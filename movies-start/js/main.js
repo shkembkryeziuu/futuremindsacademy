@@ -51,6 +51,6 @@ allMoviesHTML.innerHTML+=` <header>
 
 
 for(let i = 0; i <socialMedia.length; i++){
-    socialmediaHTML.innerHTML+=` <li><a href="#"> <${socialMedia[i].icon},${socialMedia[i].url}" alt=""> ${socialMedia[i].name}</a></li>`
+    socialmediaHTML.innerHTML+=` <li><a href="#"> <${socialMedia[i].icon}${socialMedia[i].url}" alt=""> ${socialMedia[i].name}</a></li>`
 }
 
