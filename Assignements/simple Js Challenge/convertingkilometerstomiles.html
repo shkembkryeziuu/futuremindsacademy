@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
+<html>
+<head>
+</head>
+<body>
+
     <script>
-      // Prompt user for kilometers
-      let kilometers = parseFloat(
-        prompt("Please enter the number of kilometers:")
-      );
+            let kilometers = prompt("Please enter the number of kilometers:");
+            let miles = kilometers / 1.6;
+            alert(kilometers + " kilometers is " + miles.toFixed(2) + " miles.");
+        
 
-      let sum = kilometers / 1.6;
+            let radius = prompt("Please enter the radius of the circle:");
+            let area = Math.PI * Math.pow(radius, 2);
+            alert("The area of a circle with radius " + radius + " is " + area.toFixed(2) + " square units.");
 
-      alert(sum);
+            let euros = prompt("Please enter the amount in euros:");
+            let exchangeRate = 1.1; // Example exchange rate
+            let dollars = euros * exchangeRate;
+            alert(euros + " euros is " + dollars.toFixed(2) + " dollars.");
     </script>
-  </body>
+</body>
 </html>
+
