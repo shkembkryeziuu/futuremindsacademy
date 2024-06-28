@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+       
+    let totalSum = 0;
+    while (true) {
+        let input = prompt("Enter a positive number (or 0 to finish):");
+        let number = parseFloat(input);
+
+        if (isNaN(number)) {
+            alert("Invalid input. Please enter a number.");
+            continue;
+        }
+
+        if (number < 0) {
+            alert("Please enter a positive number.");
+            continue;
+        }
+
+        if (number === 0) {
+            break;
+        }
+
+        totalSum += number;
+    }
+
+    alert(`The sum of the numbers you wrote is equal to ${totalSum}.`);
+
+
+
+
+    </script>
+</body>
+</html>
