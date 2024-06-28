@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+let username = prompt("Enter username:");
+let password = prompt("Enter password:");
+
+// Checking credentials using the AND operator
+if (username === "admin" && password === "12341234") {
+    alert("Welcome, admin!");
+} else {
+    alert("Wrong credentials!");
+}
+
+
+let username1 = prompt("Enter username:");
+let password2 = prompt("Enter password:");
+
+// Checking credentials using the OR and NOT operators
+if (!(username1 !== "admin" || password2 !== "12341234")) {
+    alert("Welcome, admin!");
+} else {
+    alert("Wrong credentials!");
+}
+
+    </script>
+</body>
+</html>
