@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to check if a number is a valid percentage (0-100)
+const isValidPercentage = (number) => {
+    return typeof number === 'number' && number >= 0 && number <= 100;
+};
+
+// Function to get the color of the progress bar based on percentage
+const getProgressColor = (percentage) => {
+    if (percentage >= 0 && percentage < 25) {
+        return 'red';
+    } else if (percentage >= 25 && percentage < 50) {
+        return 'orange';
+    } else if (percentage >= 50 && percentage < 75) {
+        return 'yellow';
+    } else {
+        return 'green';
+    }
+};
+
+// Function to modify the progress bar element
+const modifyProgressBar = (percentage, color) => {
+    const progressBar = document.querySelector('.progress-bar');
+    if (progressBar) {
+        progressBar.style.width = percentage + '%';
+        progressBar.setAttribute('aria-valuenow', percentage);
+        progressBar.setAttribute('data-bs-toggle', 'tooltip');
+        progressBar.setAttribute('data-bs-placement', 'top');
+        progressBar.setAttribute('title', `${percentage}%`);
+        progressBar.style.backgroundColor = color;
+    }
+};
+
+// Function to set the progress bar with a random percentage every 2 seconds
+const setProgress = () => {
+    const randomPercentage = Math.floor(Math.random() * 101); // Random number from 0 to 100
+    const color = getProgressColor(randomPercentage);
+    modifyProgressBar(randomPercentage, color);
+};
+
+// Start interval to update progress every 2 seconds
+setInterval(setProgress, 2000);
+
+// Initial progress setup
+setProgress();
+
+    </script>
+</body>
+</html>

@@ -22,29 +22,30 @@ let loadgenres = function(g){
     allmoviesListHTML.innerHTML = allMoviesHTML;
 
 let moviepage = function(g,m){
-allMoviesHTML.innerHTML+=` <header>
+  let allMoviesHTML2 = '';
+allMoviesHTML2 +=` <header>
                   <h2><a href="#"></a></h2>
                   <div class="cl">&nbsp;</div>
                 </header>
                 <div class="movie-trailer">
                   <iframe class="responsive-iframe" src="https://www.youtube.com/embed/TRFM7HQmkH0?si=5ypErhCZwGbm2re0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-                </div> <p class="date">${allMovies[m].movies[g].date}</p>
+                </div> <p class="date">${allMovies[g].date}</p>
                   <div class="right">
-                    Authors: ${allMovies[m].movies[g].actors}
+                    Authors: ${allMovies[g].actors}
                   </div>
                   <div class="cl">&nbsp;</div>
                 </div>
                 <!-- end of meta -->
                 <!-- post-cnt -->
                 <div class="post-cnt">
-                  <p>${allMovies[m].movies[g].desc} </p>
+                  <p>${allMovies[g].length} </p>
                 </div>
                 <!-- end of post-cnt -->
               </div>`
               };
 
-              movie.innerHTML = allMoviesHTML;
+              movie.innerHTML = allMoviesHTML2;
 };
      
 
