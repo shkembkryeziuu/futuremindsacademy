@@ -22,7 +22,7 @@ function loadMovies(g){
         <li onclick="loadMovieDetail(${g}, ${i}, this)">
             <h4>${gerneMovies[i].title}</h4>
             <img src="assets/img/${gerneMovies[i].thumb}" alt="Plane">
-            <p class="description">${gerneMovies[i].desc}</p>
+            <p class="description">${gerneMovies[i].desc}</p>4
             <div class="row movie-stats m0 p0">
                 <div class="col m0 p0">Date: <span>${gerneMovies[i].date}</span> </div>
                 <div class="col m0 p0">Length: <span>${gerneMovies[i].length}</span> </div>

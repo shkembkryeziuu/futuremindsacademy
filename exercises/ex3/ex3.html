@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="id">Add</button>
+    <h1 class="added">0</h1>
+
+
+
+
+
+    <script>
+const add = document.querySelector('.id')
+const added = document.querySelector('.added');
+let count = 0;
+
+add.addEventListener('click', function(){
+    count++;
+    added.textContent = count;
+
+})
+    </script>
+</body>
+</html>

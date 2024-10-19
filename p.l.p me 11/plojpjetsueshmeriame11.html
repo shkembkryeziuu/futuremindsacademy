@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+function kontrolloNumrin() {
+    const numri = prompt("Ju lutem shkruani një numër:");
+
+    const numriInt = parseInt(numri);
+
+    if (isNaN(numriInt)) {
+        console.log("Ju lutem shkruani një numër të vlefshëm.");
+        return;
+    };
+
+    if (numriInt % 11 === 0) {
+        console.log(numriInt + " plotpjesohet me 11.");
+    } else {
+        console.log(numriInt + " nuk plotpjesohet me 11.");
+    }
+
+    
+    const shifratTek = [];
+    const shifratCift = [];
+    const numriStr = numriInt.toString();
+
+    for (let i = 0; i < numriStr.length; i++) {
+        if (i % 2 === 0) {
+            shifratTek.push(numriStr[i]);
+        } else {
+            shifratCift.push(numriStr[i]); 
+        }
+    }
+
+    console.log("Shifrat në pozitat tek janë: " + shifratTek.join(", "));
+    console.log("Shifrat në pozitat çift janë: " + shifratCift.join(", "));
+}
+kontrolloNumrin();
+
+</script>
+
+</body>
+</html>

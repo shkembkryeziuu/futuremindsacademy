@@ -5,7 +5,7 @@ const typesOffMovies = document.querySelector(".typesOffMovies");
 const sociallMedia = document.querySelector(".socialsMedia");
 
 for (let i = 0; i < topNavigation.length; i++) {
-  typesOffMovies.innerHTML+= `<li><a href="#">${topNavigation[i]}</a></li>`;
+  typesOffMovies.innerHTML += `<li><a href="#">${topNavigation[i]}</a></li>`;
 };
 
 
@@ -13,16 +13,18 @@ for (let i = 0; i < allMovies.length; i++) {
   movieTypes.innerHTML += `<li><a href="javascript: loadGernes(${i})">${allMovies[i].genres}</a></li>`;
 };
 
+
+
 let loadGernes = function (g) {
   let allMoviesHTML = '';
   let movieListGerne = allMovies[g].movies;
 
   for (let i = 0; i < movieListGerne.length; i++) {
-    allMoviesHTML +=`<li onclick="movieDetailPage(${g}, ${i})"><a href="#">${movieListGerne[i].title}  <strong>${movieListGerne[i].length} mins</strong></a></li>`;
+    allMoviesHTML += ` <li onclick="movieDetailPage(${g}, ${i})"><a href="#">${movieListGerne[i].title}  <strong>${movieListGerne[i].length} mins</strong></a></li>`;
   };
 
   movieFilms.innerHTML = allMoviesHTML;
-};
+}
 
 
 
@@ -49,7 +51,7 @@ let movieDetailPage = function (g, m) {
       <!-- end of meta -->
       <!-- post-cnt -->
       <div class="post-cnt">
-        <p>${movieListGerne[m].desc}</p>
+        <p>${movieListGerne[m].desc} </p>
       </div>
       <!-- end of post-cnt -->
     </div>
