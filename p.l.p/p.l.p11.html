@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numri Kontrollues</title>
+    <link rel="stylesheet" href="style.css" />
+            
+</head>
+<body>
+    <div class="form">
+        <label for="number">Shkruani numrin tuaj</label>
+        <input type="number" name="number" id="number" />
+        <button type="submit">Shiko</button>
+        <div class="info">
+            <h1></h1>
+            <p id="tek"></p>
+            <p id="cift"></p>
+        </div>
+    </div>
+
+    <script>
+        const inp = document.getElementById("number");
+        const tek = document.getElementById("tek");
+        const cift = document.getElementById("cift");
+        const pergjigje = document.querySelector("h1");
+        const btn = document.querySelector("button");
+
+        function kontrolloNumrin() {
+            const numri = inp.value;
+            const numriInt = parseInt(numri);
+
+            
+            if (isNaN(numriInt)) {
+                alert(" Shkruani një numër të vlefshëm.");
+                return;
+            }
+
+        
+            if (numriInt % 11 === 0) {
+                pergjigje.innerHTML = `${numriInt} plotpjesohet me 11.`;
+            } else {
+                pergjigje.innerHTML = `${numriInt} nuk plotpjesohet me 11.`;
+            }
+
+            const shifratTek = [];
+            const shifratCift = [];
+            const numriStr = numriInt.toString();
+
+            
+            for (let i = 0; i < numriStr.length; i++) {
+                if ((i + 1) % 2 !== 0) {
+                    shifratTek.push(numriStr[i]); 
+                } else {
+                    shifratCift.push(numriStr[i]); 
+                }
+            }
+
+            
+            tek.innerHTML = `Shifrat në pozitat tek janë: ${shifratTek.join(", ")}`;
+            cift.innerHTML = `Shifrat në pozitat çift janë: ${shifratCift.join(", ")}`;
+        }
+
+        
+        btn.addEventListener("click", () => {
+            kontrolloNumrin();
+        });
+    </script>
+</body>
+</html>
+
+
