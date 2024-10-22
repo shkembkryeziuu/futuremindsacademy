@@ -1,49 +1,83 @@
-
-body {
-    padding: 30px;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(234, 233, 233);
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.form {
-    width: 50%;
-    height: 70%;
-    border-radius: 30px;
-    padding: 70px;
-    background-color: white;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 label {
-    font-size: 40px;
-}
-input {
-    width: 50%;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    padding: 5px;
-}
-button {
-    width: 51%;
-    background-color: rgb(164, 185, 255);
-    height: 40px;
-    font-size: 20px;
-    border: none;
-    font-weight: bolder;
-    border-radius: 10px;
-}
-.info {
-    height: fit-content;
+    display: block;
+    color: #34495e;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 20px;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #7f8c8d;
+    font-size: 16px;
+}

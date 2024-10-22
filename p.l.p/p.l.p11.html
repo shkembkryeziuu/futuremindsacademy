@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Numri Kontrollues</title>
     <link rel="stylesheet" href="style.css" />
-            
 </head>
 <body>
-    <div class="form">
-        <label for="number">Shkruani numrin tuaj</label>
-        <input type="number" name="number" id="number" />
-        <button type="submit">Shiko</button>
-        <div class="info">
-            <h1></h1>
-            <p id="tek"></p>
-            <p id="cift"></p>
+    <div class="container">
+        <div class="form">
+            <h1>Kontrolluesi i Numrit</h1>
+            <label for="number">Shkruani numrin tuaj</label>
+            <input type="number" name="number" id="number" placeholder="Vendosni numrin këtu" />
+            <button type="submit">Shiko</button>
+            <div class="info">
+                <h2 id="pergjigje"></h2>
+                <p id="tek"></p>
+                <p id="cift"></p>
+            </div>
         </div>
     </div>
 
@@ -23,20 +25,18 @@
         const inp = document.getElementById("number");
         const tek = document.getElementById("tek");
         const cift = document.getElementById("cift");
-        const pergjigje = document.querySelector("h1");
+        const pergjigje = document.getElementById("pergjigje");
         const btn = document.querySelector("button");
 
         function kontrolloNumrin() {
             const numri = inp.value;
             const numriInt = parseInt(numri);
 
-            
             if (isNaN(numriInt)) {
-                alert(" Shkruani një numër të vlefshëm.");
+                alert("Ju lutem shkruani një numër të vlefshëm.");
                 return;
             }
 
-        
             if (numriInt % 11 === 0) {
                 pergjigje.innerHTML = `${numriInt} plotpjesohet me 11.`;
             } else {
@@ -47,26 +47,21 @@
             const shifratCift = [];
             const numriStr = numriInt.toString();
 
-            
             for (let i = 0; i < numriStr.length; i++) {
                 if ((i + 1) % 2 !== 0) {
-                    shifratTek.push(numriStr[i]); 
+                    shifratTek.push(numriStr[i]);
                 } else {
-                    shifratCift.push(numriStr[i]); 
+                    shifratCift.push(numriStr[i]);
                 }
             }
 
-            
             tek.innerHTML = `Shifrat në pozitat tek janë: ${shifratTek.join(", ")}`;
             cift.innerHTML = `Shifrat në pozitat çift janë: ${shifratCift.join(", ")}`;
         }
 
-        
         btn.addEventListener("click", () => {
             kontrolloNumrin();
         });
     </script>
 </body>
 </html>
-
-
