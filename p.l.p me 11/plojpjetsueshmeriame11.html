@@ -1,184 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontrollo numrin per plotpjestueshmeri me 11</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .calculator {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .screen {
-            background-color: #444;
-            color: #fff;
-            font-size: 2.5em;
-            text-align: right;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-        }
-        .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 10px;
-        }
-        button {
-            background-color: #555;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 20px;
-            font-size: 1.5em;
-            cursor: pointer;
-            transition: background-color 0.2s, transform 0.1s;
-        }
-        button:hover {
-            background-color: #777;
-        }
-        button:active {
-            transform: scale(0.98);
-        }
-        button.operation {
-            background-color: #ff9500;
-        }
-        button.clear {
-            background-color: #f44336;
-        }
-        .history {
-            margin-top: 20px;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            max-height: 150px;
-            overflow-y: auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .history h2 {
-            margin-top: 0;
-            font-size: 1.2em;
-        }
-        .history ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .history li {
-            margin: 5px 0;
-            font-size: 1em;
-        }
-    </style>
-</head>
-<body>
-    <div class="calculator">
-        <div class="screen" id="screen">0</div>
-        <div class="buttons">
-            <button onclick="clearScreen()" class="clear">C</button>
-            <button></button>
-            <button></button>
-            <button onclick="calculate()">=</button>
-
-            <button onclick="appendNumber(7)">7</button>
-            <button onclick="appendNumber(8)">8</button>
-            <button onclick="appendNumber(9)">9</button>
-
-            <button onclick="appendNumber(4)">4</button>
-            <button onclick="appendNumber(5)">5</button>
-            <button onclick="appendNumber(6)">6</button>
-
-            <button onclick="appendNumber(1)">1</button>
-            <button onclick="appendNumber(2)">2</button>
-            <button onclick="appendNumber(3)">3</button>
-
-            <button onclick="appendNumber(0)" style="grid-column: span 3;">0</button>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numri Kontrollues</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1>Kontrolluesi i Numrit</h1>
+        <label for="number">Shkruani numrin tuaj</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          placeholder="Vendosni numrin këtu"
+        />
+        <button type="submit">Shiko</button>
+        <div class="info">
+          <h2 id="pergjigje"></h2>
+          <p id="tek"></p>
+          <p id="cift"></p>
         </div>
-
-        <div class="history">
-            <h2>Historia</h2>
-            <ul id="history"></ul>
-        </div>
+      </div>
     </div>
 
     <script>
-        let currentInput = "";
-        const historiku = [];
+      const inp = document.getElementById("number");
+      const tek = document.getElementById("tek");
+      const cift = document.getElementById("cift");
+      const pergjigje = document.getElementById("pergjigje");
+      const btn = document.querySelector("button");
 
-        function appendNumber(number) {
-            currentInput += number;
-            updateScreen(currentInput);
+      function kontrolloNumrin() {
+        const numri = inp.value;
+        const numriInt = parseInt(numri);
+
+        if (isNaN(numriInt)) {
+          alert("Ju lutem shkruani një numër të vlefshëm.");
+          return;
         }
 
-        function updateScreen(value) {
-            const screen = document.getElementById("screen");
-            screen.textContent = value;
+        if (numriInt % 11 === 0) {
+          pergjigje.innerHTML = `${numriInt} plotpjesohet me 11.`;
+        } else {
+          pergjigje.innerHTML = `${numriInt} nuk plotpjesohet me 11.`;
         }
 
-        function clearScreen() {
-            currentInput = "";
-            updateScreen("0");
+        const shifratTek = [];
+        const shifratCift = [];
+        const numriStr = numriInt.toString();
+
+        for (let i = 0; i < numriStr.length; i++) {
+          if ((i + 1) % 2 !== 0) {
+            shifratTek.push(numriStr[i]);
+          } else {
+            shifratCift.push(numriStr[i]);
+          }
         }
 
-        function calculate() {
-            if (currentInput === "") return;
+        tek.innerHTML = `Shifrat në pozitat tek janë: ${shifratTek.join(", ")}`;
+        cift.innerHTML = `Shifrat në pozitat çift janë: ${shifratCift.join(
+          ", "
+        )}`;
+      }
 
-            const numriInt = parseInt(currentInput);
-
-            if (isNaN(numriInt)) {
-                alert(" Shkruani një numër të vlefshëm.");
-                return;
-            }
-
-          
-            let mesazh = "";
-            if (numriInt % 11 === 0) {
-                mesazh = numriInt + " plotpjesohet me 11.";
-            } else {
-                mesazh = numriInt + " nuk plotpjesohet me 11.";
-            }
-            const shifratTek = [];
-            const shifratCift = [];
-            const numriStr = numriInt.toString();
-
-            for (let i = 0; i < numriStr.length; i++) {
-                if ((i + 1) % 2 !== 0) {
-                    shifratTek.push(numriStr[i]);
-                } else {
-                    shifratCift.push(numriStr[i]);
-                }
-            }
-
-            mesazh += "\nShifrat në pozitat tek janë: " + shifratTek.join(", ");
-            mesazh += "\nShifrat në pozitat çift janë: " + shifratCift.join(", ");
-
-            historiku.push(mesazh);
-            updateHistory();
-
-            clearScreen();  
-        }
-
-    
-        function updateHistory() {
-            const historyElement = document.getElementById("history");
-            historyElement.innerHTML = "";
-            historiku.forEach((entry, index) => {
-                const li = document.createElement("li");
-                li.textContent = "Numri " + (index + 1) + ": " + entry;
-                historyElement.appendChild(li);
-            });
-        }
+      btn.addEventListener("click", () => {
+        kontrolloNumrin();
+      });
     </script>
-</body>
+  </body>
 </html>
