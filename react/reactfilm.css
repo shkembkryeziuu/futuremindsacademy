@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.SongList {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.SongList_Title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #444;
+}
+
+.SongList_List {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: song-counter;
+}
+
+.SongRow {
+  padding: 15px 20px;
+  margin: 5px 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 1em;
+  color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.SongRow:hover {
+  background-color: #e9ecef;
+}
+
+.SongRow::before {
+  content: counter(song-counter) ".";
+  counter-increment: song-counter;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #888;
+}
